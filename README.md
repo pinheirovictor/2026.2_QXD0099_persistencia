@@ -1,0 +1,1 @@
+# 2026.2_QXD0099_persistencia-01A-
