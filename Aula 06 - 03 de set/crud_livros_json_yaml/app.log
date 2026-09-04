@@ -1,0 +1,10 @@
+2026-09-02 20:30:37,651 - persistencia_api - INFO - Sistema de logging inicializado.
+2026-09-02 20:30:42,965 - persistencia_api - INFO - Endpoint raiz acessado.
+2026-09-02 20:31:08,498 - persistencia_api - WARNING - Tentativa de cadastrar livro com ID duplicado: 1
+2026-09-02 20:31:13,910 - persistencia_api - DEBUG - Arquivo livros.json atualizado com 2 registro(s).
+2026-09-02 20:31:13,910 - persistencia_api - INFO - Livro cadastrado: id=2, titulo=string
+2026-09-02 20:31:37,039 - persistencia_api - DEBUG - Arquivo livros.json atualizado com 2 registro(s).
+2026-09-02 20:31:37,039 - persistencia_api - INFO - Livro atualizado: 1
+2026-09-02 20:31:48,854 - persistencia_api - DEBUG - Arquivo livros.json atualizado com 1 registro(s).
+2026-09-02 20:31:48,854 - persistencia_api - INFO - Livro removido: 1
+2026-09-02 20:31:58,487 - persistencia_api - INFO - Listagem de livros: 1 registro(s).

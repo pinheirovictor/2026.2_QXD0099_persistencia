@@ -1,0 +1,12 @@
+[
+    {
+        "id": 2,
+        "titulo": "string",
+        "autor": "string",
+        "ano": 1000,
+        "categorias": [
+            "string"
+        ],
+        "disponivel": true
+    }
+]
