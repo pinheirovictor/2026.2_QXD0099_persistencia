@@ -1,0 +1,181 @@
+INSERT INTO ClubeAstronomia VALUES
+(1, 'Clube Estelar 1', 'Cidade 1', '2011-01-01'),
+(2, 'Clube Estelar 2', 'Cidade 2', '2012-01-01'),
+(3, 'Clube Estelar 3', 'Cidade 3', '2013-01-01'),
+(4, 'Clube Estelar 4', 'Cidade 4', '2014-01-01'),
+(5, 'Clube Estelar 5', 'Cidade 5', '2015-01-01'),
+(6, 'Clube Estelar 6', 'Cidade 6', '2016-01-01'),
+(7, 'Clube Estelar 7', 'Cidade 7', '2017-01-01'),
+(8, 'Clube Estelar 8', 'Cidade 8', '2018-01-01'),
+(9, 'Clube Estelar 9', 'Cidade 9', '2019-01-01'),
+(10, 'Clube Estelar 10', 'Cidade 10', '2020-01-01'),
+(11, 'Clube Estelar 11', 'Cidade 11', '2021-01-01'),
+(12, 'Clube Estelar 12', 'Cidade 12', '2022-01-01'),
+(13, 'Clube Estelar 13', 'Cidade 13', '2023-01-01'),
+(14, 'Clube Estelar 14', 'Cidade 14', '2024-01-01'),
+(15, 'Clube Estelar 15', 'Cidade 15', '2025-01-01');
+INSERT INTO Membro VALUES (1, 'Membro 1', 'm1@astro.com', 8);
+INSERT INTO Membro VALUES (2, 'Membro 2', 'm2@astro.com', 13);
+INSERT INTO Membro VALUES (3, 'Membro 3', 'm3@astro.com', 6);
+INSERT INTO Membro VALUES (4, 'Membro 4', 'm4@astro.com', 7);
+INSERT INTO Membro VALUES (5, 'Membro 5', 'm5@astro.com', 2);
+INSERT INTO Membro VALUES (6, 'Membro 6', 'm6@astro.com', 15);
+INSERT INTO Membro VALUES (7, 'Membro 7', 'm7@astro.com', 1);
+INSERT INTO Membro VALUES (8, 'Membro 8', 'm8@astro.com', 8);
+INSERT INTO Membro VALUES (9, 'Membro 9', 'm9@astro.com', 3);
+INSERT INTO Membro VALUES (10, 'Membro 10', 'm10@astro.com', 6);
+INSERT INTO Membro VALUES (11, 'Membro 11', 'm11@astro.com', 11);
+INSERT INTO Membro VALUES (12, 'Membro 12', 'm12@astro.com', 7);
+INSERT INTO Membro VALUES (13, 'Membro 13', 'm13@astro.com', 11);
+INSERT INTO Membro VALUES (14, 'Membro 14', 'm14@astro.com', 12);
+INSERT INTO Membro VALUES (15, 'Membro 15', 'm15@astro.com', 6);
+INSERT INTO CorpoCeleste VALUES (1, 'Objeto 1', 'Estrela', 'Cassiopeia');
+INSERT INTO CorpoCeleste VALUES (2, 'Objeto 2', 'Nebulosa', 'Escorpião');
+INSERT INTO CorpoCeleste VALUES (3, 'Objeto 3', 'Galáxia', 'Cão Maior');
+INSERT INTO CorpoCeleste VALUES (4, 'Objeto 4', 'Cometa', 'Touro');
+INSERT INTO CorpoCeleste VALUES (5, 'Objeto 5', 'Planeta', 'Órion');
+INSERT INTO CorpoCeleste VALUES (6, 'Objeto 6', 'Estrela', 'Cassiopeia');
+INSERT INTO CorpoCeleste VALUES (7, 'Objeto 7', 'Nebulosa', 'Escorpião');
+INSERT INTO CorpoCeleste VALUES (8, 'Objeto 8', 'Galáxia', 'Cão Maior');
+INSERT INTO CorpoCeleste VALUES (9, 'Objeto 9', 'Cometa', 'Touro');
+INSERT INTO CorpoCeleste VALUES (10, 'Objeto 10', 'Planeta', 'Órion');
+INSERT INTO CorpoCeleste VALUES (11, 'Objeto 11', 'Estrela', 'Cassiopeia');
+INSERT INTO CorpoCeleste VALUES (12, 'Objeto 12', 'Nebulosa', 'Escorpião');
+INSERT INTO CorpoCeleste VALUES (13, 'Objeto 13', 'Galáxia', 'Cão Maior');
+INSERT INTO CorpoCeleste VALUES (14, 'Objeto 14', 'Cometa', 'Touro');
+INSERT INTO CorpoCeleste VALUES (15, 'Objeto 15', 'Planeta', 'Órion');
+INSERT INTO Equipamento VALUES (1, 'Modelo 1', 'Binóculo', 'AstroTech');
+INSERT INTO Equipamento VALUES (2, 'Modelo 2', 'Telescópio', 'AstroTech');
+INSERT INTO Equipamento VALUES (3, 'Modelo 3', 'Binóculo', 'AstroTech');
+INSERT INTO Equipamento VALUES (4, 'Modelo 4', 'Telescópio', 'AstroTech');
+INSERT INTO Equipamento VALUES (5, 'Modelo 5', 'Binóculo', 'AstroTech');
+INSERT INTO Equipamento VALUES (6, 'Modelo 6', 'Telescópio', 'AstroTech');
+INSERT INTO Equipamento VALUES (7, 'Modelo 7', 'Binóculo', 'AstroTech');
+INSERT INTO Equipamento VALUES (8, 'Modelo 8', 'Telescópio', 'AstroTech');
+INSERT INTO Equipamento VALUES (9, 'Modelo 9', 'Binóculo', 'AstroTech');
+INSERT INTO Equipamento VALUES (10, 'Modelo 10', 'Telescópio', 'AstroTech');
+INSERT INTO Equipamento VALUES (11, 'Modelo 11', 'Binóculo', 'AstroTech');
+INSERT INTO Equipamento VALUES (12, 'Modelo 12', 'Telescópio', 'AstroTech');
+INSERT INTO Equipamento VALUES (13, 'Modelo 13', 'Binóculo', 'AstroTech');
+INSERT INTO Equipamento VALUES (14, 'Modelo 14', 'Telescópio', 'AstroTech');
+INSERT INTO Equipamento VALUES (15, 'Modelo 15', 'Binóculo', 'AstroTech');
+INSERT INTO LocalObservacao VALUES (1, 'Local 1', -5.10, -38.10, 101);
+INSERT INTO LocalObservacao VALUES (2, 'Local 2', -5.20, -38.20, 102);
+INSERT INTO LocalObservacao VALUES (3, 'Local 3', -5.30, -38.30, 103);
+INSERT INTO LocalObservacao VALUES (4, 'Local 4', -5.40, -38.40, 104);
+INSERT INTO LocalObservacao VALUES (5, 'Local 5', -5.50, -38.50, 105);
+INSERT INTO LocalObservacao VALUES (6, 'Local 6', -5.60, -38.60, 106);
+INSERT INTO LocalObservacao VALUES (7, 'Local 7', -5.70, -38.70, 107);
+INSERT INTO LocalObservacao VALUES (8, 'Local 8', -5.80, -38.80, 108);
+INSERT INTO LocalObservacao VALUES (9, 'Local 9', -5.90, -38.90, 109);
+INSERT INTO LocalObservacao VALUES (10, 'Local 10', -5.100, -38.100, 110);
+INSERT INTO LocalObservacao VALUES (11, 'Local 11', -5.110, -38.110, 111);
+INSERT INTO LocalObservacao VALUES (12, 'Local 12', -5.120, -38.120, 112);
+INSERT INTO LocalObservacao VALUES (13, 'Local 13', -5.130, -38.130, 113);
+INSERT INTO LocalObservacao VALUES (14, 'Local 14', -5.140, -38.140, 114);
+INSERT INTO LocalObservacao VALUES (15, 'Local 15', -5.150, -38.150, 115);
+INSERT INTO EventoObservacao VALUES (1, 'Evento 1', '2025-07-02', 1);
+INSERT INTO EventoObservacao VALUES (2, 'Evento 2', '2025-07-03', 2);
+INSERT INTO EventoObservacao VALUES (3, 'Evento 3', '2025-07-04', 3);
+INSERT INTO EventoObservacao VALUES (4, 'Evento 4', '2025-07-05', 4);
+INSERT INTO EventoObservacao VALUES (5, 'Evento 5', '2025-07-06', 5);
+INSERT INTO EventoObservacao VALUES (6, 'Evento 6', '2025-07-07', 6);
+INSERT INTO EventoObservacao VALUES (7, 'Evento 7', '2025-07-08', 7);
+INSERT INTO EventoObservacao VALUES (8, 'Evento 8', '2025-07-09', 8);
+INSERT INTO EventoObservacao VALUES (9, 'Evento 9', '2025-07-10', 9);
+INSERT INTO EventoObservacao VALUES (10, 'Evento 10', '2025-07-11', 10);
+INSERT INTO OrganizacaoEvento VALUES (1, 1);
+INSERT INTO OrganizacaoEvento VALUES (2, 2);
+INSERT INTO OrganizacaoEvento VALUES (3, 3);
+INSERT INTO OrganizacaoEvento VALUES (4, 4);
+INSERT INTO OrganizacaoEvento VALUES (5, 5);
+INSERT INTO Observacao VALUES (1, 1, 6, 9, 1, '2025-07-7 22:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (2, 1, 7, 3, 11, '2025-07-5 22:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (3, 1, 7, 12, 6, '2025-07-3 20:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (4, 1, 5, 11, 13, '2025-07-5 21:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (5, 1, 4, 11, 14, '2025-07-4 21:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (6, 2, 3, 14, 15, '2025-07-10 21:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (7, 2, 7, 5, 4, '2025-07-6 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (8, 2, 9, 6, 3, '2025-07-10 21:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (9, 2, 5, 2, 7, '2025-07-9 21:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (10, 2, 2, 8, 15, '2025-07-9 20:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (11, 3, 6, 9, 9, '2025-07-10 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (12, 3, 8, 15, 3, '2025-07-1 22:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (13, 3, 1, 3, 3, '2025-07-8 18:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (14, 3, 10, 10, 6, '2025-07-2 18:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (15, 3, 8, 1, 15, '2025-07-3 21:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (16, 4, 10, 1, 4, '2025-07-3 22:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (17, 4, 10, 14, 3, '2025-07-6 22:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (18, 4, 4, 1, 10, '2025-07-10 18:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (19, 4, 1, 7, 7, '2025-07-3 19:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (20, 4, 7, 4, 8, '2025-07-3 21:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (21, 5, 6, 14, 12, '2025-07-5 18:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (22, 5, 1, 6, 5, '2025-07-8 18:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (23, 5, 5, 14, 11, '2025-07-3 18:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (24, 5, 1, 15, 4, '2025-07-2 18:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (25, 5, 8, 3, 6, '2025-07-5 20:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (26, 6, 10, 7, 11, '2025-07-5 22:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (27, 6, 7, 11, 5, '2025-07-8 18:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (28, 6, 4, 11, 8, '2025-07-4 21:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (29, 6, 4, 4, 3, '2025-07-10 21:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (30, 6, 7, 9, 15, '2025-07-9 19:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (31, 7, 8, 9, 4, '2025-07-1 20:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (32, 7, 2, 12, 1, '2025-07-4 20:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (33, 7, 9, 13, 1, '2025-07-1 21:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (34, 7, 5, 3, 5, '2025-07-3 18:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (35, 7, 4, 14, 1, '2025-07-9 22:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (36, 8, 1, 15, 4, '2025-07-3 20:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (37, 8, 2, 3, 12, '2025-07-2 21:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (38, 8, 3, 9, 9, '2025-07-8 20:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (39, 8, 2, 9, 13, '2025-07-3 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (40, 8, 2, 6, 13, '2025-07-8 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (41, 9, 4, 3, 8, '2025-07-5 22:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (42, 9, 6, 3, 13, '2025-07-6 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (43, 9, 8, 12, 15, '2025-07-5 20:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (44, 9, 2, 9, 9, '2025-07-10 20:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (45, 9, 10, 15, 13, '2025-07-5 18:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (46, 10, 6, 7, 13, '2025-07-7 18:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (47, 10, 6, 12, 3, '2025-07-2 20:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (48, 10, 2, 12, 12, '2025-07-9 19:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (49, 10, 9, 8, 9, '2025-07-8 19:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (50, 10, 9, 9, 2, '2025-07-5 21:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (51, 11, 4, 15, 11, '2025-07-2 18:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (52, 11, 7, 14, 2, '2025-07-9 20:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (53, 11, 5, 13, 6, '2025-07-2 18:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (54, 11, 10, 8, 9, '2025-07-7 22:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (55, 11, 10, 5, 6, '2025-07-5 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (56, 12, 5, 12, 8, '2025-07-1 21:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (57, 12, 8, 15, 5, '2025-07-8 18:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (58, 12, 10, 9, 13, '2025-07-1 22:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (59, 12, 10, 14, 2, '2025-07-9 18:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (60, 12, 8, 9, 2, '2025-07-7 21:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (61, 13, 3, 13, 12, '2025-07-5 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (62, 13, 8, 3, 10, '2025-07-2 21:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (63, 13, 10, 12, 3, '2025-07-1 18:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (64, 13, 9, 7, 13, '2025-07-3 20:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (65, 13, 5, 1, 8, '2025-07-10 22:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (66, 14, 1, 5, 14, '2025-07-3 19:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (67, 14, 5, 14, 6, '2025-07-5 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (68, 14, 3, 11, 8, '2025-07-4 20:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (69, 14, 8, 13, 2, '2025-07-8 18:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (70, 14, 6, 5, 12, '2025-07-9 21:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (71, 15, 4, 14, 10, '2025-07-3 20:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO Observacao VALUES (72, 15, 3, 13, 10, '2025-07-2 21:00:00', 'nublado', 'Anotações...');
+INSERT INTO Observacao VALUES (73, 15, 5, 5, 7, '2025-07-4 19:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (74, 15, 8, 6, 3, '2025-07-1 20:00:00', 'chuva leve', 'Anotações...');
+INSERT INTO Observacao VALUES (75, 15, 5, 2, 15, '2025-07-9 19:00:00', 'céu limpo', 'Anotações...');
+INSERT INTO LocalObservacao VALUES (16, 'Local Sem Evento 1', -5.160, -38.160, 116);
+INSERT INTO LocalObservacao VALUES (17, 'Local Sem Evento 2', -5.170, -38.170, 117);
+INSERT INTO LocalObservacao VALUES (18, 'Local Sem Evento 3', -5.180, -38.180, 118);
+
+-- Escolhemos o CorpoCeleste com id_corpo = 1 ('Objeto 1') e garantimos observação em todos os eventos
+INSERT INTO Observacao VALUES (76, 1, 1, 1, 1, '2025-07-02 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (77, 1, 2, 1, 2, '2025-07-03 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (78, 1, 3, 1, 3, '2025-07-04 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (79, 1, 4, 1, 4, '2025-07-05 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (80, 1, 5, 1, 5, '2025-07-06 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (81, 1, 6, 1, 6, '2025-07-07 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (82, 1, 7, 1, 7, '2025-07-08 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (83, 1, 8, 1, 8, '2025-07-09 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (84, 1, 9, 1, 9, '2025-07-10 22:00:00', 'céu limpo', 'Observação para Q10');
+INSERT INTO Observacao VALUES (85, 1, 10, 1, 10, '2025-07-11 22:00:00', 'céu limpo', 'Observação para Q10');
