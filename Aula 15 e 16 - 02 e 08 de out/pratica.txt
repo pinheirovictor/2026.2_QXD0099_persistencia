@@ -1,0 +1,512 @@
+================================================================================
+PRÁTICA — PRIMEIROS PASSOS COM MONGODB
+================================================================================
+
+Disciplina: QXD0099 — Desenvolvimento de Software para Persistência
+
+Objetivo:
+Criar um banco de dados e uma coleção no MongoDB, inserir documentos e realizar
+operações básicas de consulta, atualização e remoção.
+
+Ambiente: MongoDB Shell (mongosh)
+
+OBSERVAÇÃO:
+Execute os comandos na ordem apresentada. Algumas operações alteram ou removem
+documentos, portanto os resultados das consultas podem mudar ao longo da prática.
+
+================================================================================
+1. CRIANDO O BANCO DE DADOS
+================================================================================
+
+Selecione o banco de dados "locadora":
+
+    use locadora
+
+O MongoDB cria efetivamente o banco quando o primeiro documento é armazenado.
+
+Para verificar o banco atual:
+
+    db
+
+Para listar os bancos disponíveis:
+
+    show dbs
+
+================================================================================
+2. CRIANDO UMA COLEÇÃO
+================================================================================
+
+Crie uma coleção chamada "filmes":
+
+    db.createCollection("filmes")
+
+Para listar as coleções:
+
+    show collections
+
+================================================================================
+3. INSERINDO DOCUMENTOS
+================================================================================
+
+3.1. Inserindo um documento
+
+    db.filmes.insertOne({
+        titulo: "Interestelar",
+        ano: 2014,
+        categoria: "Ficção Científica",
+        preco: 15.00,
+        disponivel: true
+    })
+
+3.2. Inserindo vários documentos
+
+    db.filmes.insertMany([
+        {
+            titulo: "Matrix",
+            ano: 1999,
+            categoria: "Ficção Científica",
+            preco: 12.00,
+            disponivel: true
+        },
+        {
+            titulo: "O Poderoso Chefão",
+            ano: 1972,
+            categoria: "Drama",
+            preco: 10.00,
+            disponivel: false
+        },
+        {
+            titulo: "Vingadores",
+            ano: 2012,
+            categoria: "Ação",
+            preco: 14.00,
+            disponivel: true
+        },
+        {
+            titulo: "Parasita",
+            ano: 2019,
+            categoria: "Drama",
+            preco: 13.00,
+            disponivel: true
+        },
+        {
+            titulo: "Batman",
+            ano: 2022,
+            categoria: "Ação",
+            preco: 18.00,
+            disponivel: false
+        }
+    ])
+
+================================================================================
+4. CONSULTANDO TODOS OS DOCUMENTOS
+================================================================================
+
+    db.filmes.find()
+
+================================================================================
+5. CONSULTANDO POR UM CAMPO
+================================================================================
+
+5.1. Encontre todos os filmes da categoria Drama:
+
+    db.filmes.find({
+        categoria: "Drama"
+    })
+
+5.2. Encontre o filme Matrix:
+
+    db.filmes.find({
+        titulo: "Matrix"
+    })
+
+================================================================================
+6. UTILIZANDO OPERADORES DE COMPARAÇÃO
+================================================================================
+
+6.1. Maior que — filmes lançados depois de 2010:
+
+    db.filmes.find({
+        ano: { $gt: 2010 }
+    })
+
+6.2. Maior ou igual — filmes com preço a partir de R$ 14,00:
+
+    db.filmes.find({
+        preco: { $gte: 14 }
+    })
+
+6.3. Menor que — filmes com preço inferior a R$ 15,00:
+
+    db.filmes.find({
+        preco: { $lt: 15 }
+    })
+
+6.4. Menor ou igual — filmes lançados até 2014:
+
+    db.filmes.find({
+        ano: { $lte: 2014 }
+    })
+
+6.5. Diferente — filmes que não são da categoria Drama:
+
+    db.filmes.find({
+        categoria: { $ne: "Drama" }
+    })
+
+Principais operadores:
+
+    $gt   maior que
+    $gte  maior ou igual
+    $lt   menor que
+    $lte  menor ou igual
+    $ne   diferente
+    $in   pertence a uma lista
+
+================================================================================
+7. UTILIZANDO MAIS DE UMA CONDIÇÃO
+================================================================================
+
+Encontre filmes da categoria Ação lançados depois de 2010:
+
+    db.filmes.find({
+        categoria: "Ação",
+        ano: { $gt: 2010 }
+    })
+
+Quando colocamos vários campos no mesmo filtro, o MongoDB considera
+implicitamente uma operação lógica AND (E).
+
+Outro exemplo — filmes de Drama disponíveis:
+
+    db.filmes.find({
+        categoria: "Drama",
+        disponivel: true
+    })
+
+================================================================================
+8. UTILIZANDO OR
+================================================================================
+
+Encontre filmes da categoria Drama ou Ação:
+
+    db.filmes.find({
+        $or: [
+            { categoria: "Drama" },
+            { categoria: "Ação" }
+        ]
+    })
+
+Também podemos utilizar $in para comparar um campo com uma lista de valores:
+
+    db.filmes.find({
+        categoria: {
+            $in: ["Drama", "Ação"]
+        }
+    })
+
+================================================================================
+9. CONSULTANDO VALORES DENTRO DE UM INTERVALO
+================================================================================
+
+Encontre filmes lançados entre 2000 e 2020 (inclusive):
+
+    db.filmes.find({
+        ano: {
+            $gte: 2000,
+            $lte: 2020
+        }
+    })
+
+================================================================================
+10. SELECIONANDO APENAS ALGUNS CAMPOS
+================================================================================
+
+10.1. Mostrar somente título e ano:
+
+    db.filmes.find(
+        {},
+        {
+            _id: 0,
+            titulo: 1,
+            ano: 1
+        }
+    )
+
+10.2. Mostrar título, categoria e preço:
+
+    db.filmes.find(
+        {},
+        {
+            _id: 0,
+            titulo: 1,
+            categoria: 1,
+            preco: 1
+        }
+    )
+
+Essa operação é chamada de projeção.
+
+================================================================================
+11. ORDENAÇÃO
+================================================================================
+
+11.1. Ordem crescente — ordenar pelo ano:
+
+    db.filmes.find().sort({
+        ano: 1
+    })
+
+11.2. Ordem decrescente — do mais recente para o mais antigo:
+
+    db.filmes.find().sort({
+        ano: -1
+    })
+
+11.3. Ordenar pelo maior preço:
+
+    db.filmes.find().sort({
+        preco: -1
+    })
+
+No MongoDB:
+
+    1  = crescente
+    -1 = decrescente
+
+================================================================================
+12. LIMITANDO RESULTADOS
+================================================================================
+
+Mostrar somente três documentos:
+
+    db.filmes.find().limit(3)
+
+Podemos combinar ordenação e limite.
+
+Mostrar os três filmes mais caros:
+
+    db.filmes
+        .find()
+        .sort({ preco: -1 })
+        .limit(3)
+
+================================================================================
+13. CONTANDO DOCUMENTOS
+================================================================================
+
+13.1. Contar todos os filmes:
+
+    db.filmes.countDocuments({})
+
+13.2. Contar somente os filmes disponíveis:
+
+    db.filmes.countDocuments({
+        disponivel: true
+    })
+
+13.3. Contar filmes da categoria Drama:
+
+    db.filmes.countDocuments({
+        categoria: "Drama"
+    })
+
+================================================================================
+14. ATUALIZANDO UM DOCUMENTO
+================================================================================
+
+Alterar o preço de Matrix para R$ 16,00:
+
+    db.filmes.updateOne(
+        {
+            titulo: "Matrix"
+        },
+        {
+            $set: {
+                preco: 16.00
+            }
+        }
+    )
+
+Verifique o resultado:
+
+    db.filmes.find({
+        titulo: "Matrix"
+    })
+
+================================================================================
+15. ATUALIZANDO VÁRIOS DOCUMENTOS
+================================================================================
+
+Definir todos os filmes da categoria Drama como disponíveis:
+
+    db.filmes.updateMany(
+        {
+            categoria: "Drama"
+        },
+        {
+            $set: {
+                disponivel: true
+            }
+        }
+    )
+
+Verifique:
+
+    db.filmes.find({
+        categoria: "Drama"
+    })
+
+================================================================================
+16. ADICIONANDO UM NOVO CAMPO
+================================================================================
+
+No MongoDB, podemos adicionar um campo mesmo que ele não exista nos outros
+documentos.
+
+Adicionar uma nota ao filme Interestelar:
+
+    db.filmes.updateOne(
+        {
+            titulo: "Interestelar"
+        },
+        {
+            $set: {
+                nota: 9.0
+            }
+        }
+    )
+
+Consulte:
+
+    db.filmes.find({
+        titulo: "Interestelar"
+    })
+
+Observe que os demais documentos não precisam possuir o campo "nota".
+
+================================================================================
+17. REMOVENDO UM DOCUMENTO
+================================================================================
+
+Remover o filme Batman:
+
+    db.filmes.deleteOne({
+        titulo: "Batman"
+    })
+
+Verifique:
+
+    db.filmes.find()
+
+================================================================================
+18. REMOVENDO VÁRIOS DOCUMENTOS
+================================================================================
+
+Remover filmes lançados antes de 1980:
+
+    db.filmes.deleteMany({
+        ano: { $lt: 1980 }
+    })
+
+================================================================================
+19. DOCUMENTOS COM ESTRUTURAS ANINHADAS
+================================================================================
+
+Insira um novo filme contendo um subdocumento e um array:
+
+    db.filmes.insertOne({
+        titulo: "Duna",
+        ano: 2021,
+        categoria: "Ficção Científica",
+        preco: 20.00,
+        disponivel: true,
+
+        diretor: {
+            nome: "Denis Villeneuve",
+            nacionalidade: "Canadense"
+        },
+
+        atores: [
+            "Timothée Chalamet",
+            "Zendaya",
+            "Rebecca Ferguson"
+        ]
+    })
+
+Consulte o documento:
+
+    db.filmes.find({
+        titulo: "Duna"
+    })
+
+================================================================================
+20. CONSULTANDO UM CAMPO DE UM SUBDOCUMENTO
+================================================================================
+
+Encontrar filmes dirigidos por Denis Villeneuve:
+
+    db.filmes.find({
+        "diretor.nome": "Denis Villeneuve"
+    })
+
+================================================================================
+21. CONSULTANDO VALORES DE UM ARRAY
+================================================================================
+
+Encontrar filmes em que Zendaya aparece no elenco:
+
+    db.filmes.find({
+        atores: "Zendaya"
+    })
+
+================================================================================
+DESAFIO — PRATIQUE OS COMANDOS MONGODB
+================================================================================
+
+Utilizando a coleção "filmes", escreva os comandos MongoDB necessários para
+realizar as atividades abaixo.
+
+CONSULTAS BÁSICAS
+
+ 1. Listar todos os filmes.
+ 2. Listar somente os filmes disponíveis.
+ 3. Listar filmes com preço maior que R$ 12,00.
+ 4. Listar filmes com preço maior ou igual a R$ 14,00.
+ 5. Listar filmes lançados depois de 2010.
+ 6. Listar filmes lançados entre 2000 e 2020.
+ 7. Listar filmes da categoria Drama.
+ 8. Listar filmes das categorias Drama ou Ação.
+ 9. Listar filmes da categoria Drama que estejam disponíveis.
+
+PROJEÇÃO, ORDENAÇÃO E CONTAGEM
+
+10. Mostrar somente os campos título, categoria e preço.
+11. Ordenar os filmes pelo ano, do mais recente para o mais antigo.
+12. Ordenar os filmes pelo preço, do maior para o menor.
+13. Mostrar somente os três filmes mais caros.
+14. Contar quantos filmes estão disponíveis.
+
+ATUALIZAÇÃO E REMOÇÃO
+
+15. Alterar o preço de Parasita para R$ 17,00.
+16. Alterar todos os filmes de Drama para "disponivel: true".
+17. Adicionar o campo "avaliacao: 9.5" ao filme Matrix.
+18. Remover todos os filmes lançados antes de 1980.
+
+DOCUMENTOS ANINHADOS E ARRAYS
+
+19. Inserir um novo filme contendo:
+      - título;
+      - ano;
+      - categoria;
+      - preço;
+      - diretor;
+      - lista de atores.
+20. Fazer uma consulta utilizando um campo do diretor.
+21. Fazer uma consulta procurando um ator dentro do array "atores".
+
+OBSERVAÇÃO FINAL:
+Como a prática anterior já atualizou e removeu alguns documentos, certas
+atividades do desafio podem não modificar nenhum registro. Se necessário,
+reinsira os documentos correspondentes para experimentar esses comandos.
